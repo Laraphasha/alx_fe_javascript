@@ -162,7 +162,7 @@ async function syncQuotes() {  // renamed
     saveQuotes();
     populateCategories();
     filterQuotes();
-    alert("Quotes synced with server.");
+    alert("Quotes synced with server!");
   } catch (err) {
     console.error("Error syncing with server:", err);
   }
