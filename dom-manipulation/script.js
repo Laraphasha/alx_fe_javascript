@@ -41,7 +41,7 @@ function populateCategories() {
 // Function to filter quotes based on selected category
 function filterQuotes() {
     const selectedCategory = document.getElementById("categoryFilter").value;
-    const quoteContainer = document.getElementById("quote-container");
+    const quoteContainer = document.getElementById("quoteDisplay"); // ✅ fixed
 
     // Save selected category in localStorage
     localStorage.setItem("selectedCategory", selectedCategory);
@@ -67,6 +67,7 @@ function filterQuotes() {
         quoteContainer.appendChild(quoteEl);
     });
 }
+
 
 // Function to show a random quote (ignores filter)
 function showRandomQuote() {
