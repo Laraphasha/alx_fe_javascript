@@ -243,7 +243,7 @@ function createAddQuoteForm() {
 // =====================
 // Sync: Server calls
 // =====================
-async function fetchServerQuotes(limit = 10) {
+async function fetchQuotesFromServer(limit = 10) {
   const res = await fetch(`${QUOTES_ENDPOINT}?_limit=${limit}`);
   if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
   const posts = await res.json();
