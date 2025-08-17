@@ -147,7 +147,7 @@ async function fetchQuotesFromServer(limit = 10) {
 }
 
 // ========== SYNC ==========
-async function syncWithServer() {
+async function syncQuotes() {  // renamed
   try {
     const serverQuotes = await fetchQuotesFromServer(10);
     const localQuotes = getLocalQuotes();
@@ -173,6 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
   createAddQuoteForm();
   populateCategories();
   filterQuotes();
-  syncWithServer();
+  syncQuotes();
   setInterval(syncWithServer, 30000); // auto-sync every 30s
 });
