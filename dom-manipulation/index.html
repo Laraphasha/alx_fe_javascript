@@ -16,6 +16,17 @@
     <button id="random-btn">Show Random Quote</button>
     <div id="form-container"></div>
 
+    <div id="syncStatus" aria-live="polite"></div>
+
+    <div id="conflictsPanel" hidden>
+      <h3>Conflicts detected</h3>
+      <ul id="conflictList"></ul>
+    </div>
+
+    <button id="syncNowBtn" type="button">Sync Now</button>
+    <!-- Optional testing: uncomment to simulate conflicts -->
+    <!-- <button id="simulateConflictBtn" type="button">Simulate Conflict</button> -->
+
     <script src="script.js"></script>
 </body>
 </html>
